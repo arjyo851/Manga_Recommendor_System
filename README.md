@@ -85,6 +85,3 @@ The objective of this project is to build a user-based manga recommender system 
 - Data is scrapped from the largest user community on MAL called "Recommendation Club", ratings will not be reflective of all manga readers
 
 
-# Citations
-1. [Japanese Manga Market Increases By 10.3% In 2021 To 675.9 Billion Yen][1]
-2. [NPD Bookscan via The Beat: Manga Made Up 76.71% of Adult Fiction Graphic Novel Sales in 2021][2]
