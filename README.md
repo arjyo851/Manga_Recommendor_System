@@ -63,21 +63,14 @@ The objective of this project is to build a user-based manga recommender system 
 
 # Key Findings
 ## Model Selection
-![Model Performance](images/model_performance.JPG)
+![Model Performance](images/model_performance.png)
 - The scores above are calculated with a relevant score threshold of >= 7/10, at k =10
 - The scores are the calculated average after 5 folds of cross validation
 - The Baseline Only model performed the best and its recall and precision scores are almost a whole 1% higher than the 2nd best model
 
-![Baseline Random Recommendations](images/baseline.JPG)
+![Baseline Random Recommendations](images/baseline.png)
 - The machine learning models all vastly outperformed the baseline model that gives random recommendations
 
-
-# Streamlit
-![Streamlit App](images/streamlit.JPG)
-
-- Checkbox to toggle on/off the showing of recommendations with adult genres
-- User inputs genre preference for the recommendations generated. Only recommendations containing at least 1 of the selected genres will be shown.
-- User inputs favorite manga titles. These titles will be automatically given the maximum rating of 10.
 
 # Limitations of Recommender System
 - The recommender system can only recommend manga titles that are present in its data (~2,900 titles).
