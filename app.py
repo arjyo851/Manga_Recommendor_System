@@ -6,8 +6,8 @@ from surprise import BaselineOnly, Dataset, Reader
 reading_no_zero_df = pd.read_csv('./data/reading_no_zero.csv')
 combined_all_info_df = pd.read_csv('./data/combined_all_info_df_clean.csv')
 combined_df = pd.DataFrame([],columns = ['user','item','rating'])
-non_adult_genres = ['Drama','Action','Comedy','Sci-Fi','Girls Love','Avant Garde','Horror','Supernatural','Fantasy','Adventure','Romance','Gourmet','Ecchi','Sports','Boys Love','Mystery','Slice of Life','Suspense']
-all_genres = ['Drama','Action','Comedy','Sci-Fi','Girls Love','Avant Garde','Horror','Supernatural','Fantasy','Adventure','Romance','Gourmet','Ecchi','Sports','Boys Love','Mystery','Slice of Life','Suspense', 'Hentai','Erotica']
+non_adult_genres = ['Drama','Action','Comedy','Sci-Fi','Avant Garde','Horror','Supernatural','Fantasy','Adventure','Romance','Gourmet','Sports','Mystery','Slice of Life','Suspense']
+all_genres = ['Drama','Action','Comedy','Sci-Fi','Avant Garde','Horror','Supernatural','Fantasy','Adventure','Romance','Gourmet','Sports','Mystery','Slice of Life','Suspense']
 
 # no adult recommendations by default
 adult_recommendations = 'no'
@@ -38,8 +38,8 @@ def Recommend():
         
 
 st.title('Manga Recommender System')
-st.write("By Dhyaneswaran [GitHub](https://github.com/DenC16)")
-st.markdown("[Source code](https://github.com/DenC16/Manga_Recommendor_System) | Model from [Scikit-Surprise](https://surprise.readthedocs.io/en/stable/)")
+st.write("By Arjyo Chakraborty [GitHub](https://github.com/arjyo851)")
+st.markdown("[Source code](https://github.com/arjyo851/Manga_Recommendor_System) | Model from [Scikit-Surprise](https://surprise.readthedocs.io/en/stable/)")
 st.text("")
 st.text("")
 
@@ -83,9 +83,7 @@ with st.form("my_form"):
 
         recommendations_details_df = pd.merge(left = combined_all_info_df, right = Recommend(), left_on = 'title', right_on = 'Title', how = 'right')
         
-# #remove adult titles from recommendations by default                
-#         if adult_recommendations == 'no':
-#             recommendations_details_df = recommendations_details_df[(recommendations_details_df['Hentai'] == 0) & (recommendations_details_df['Erotica'] == 0)]
+
         
         new_features = ['title']
         
